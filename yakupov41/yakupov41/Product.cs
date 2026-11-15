@@ -36,13 +36,14 @@ namespace yakupov41
         {
             get
             {
-                if (this.ProductPhoto != null)
+                if (!string.IsNullOrWhiteSpace(this.ProductPhoto))
                 {
                     return "img/" + ProductPhoto;
                 }
                 else return null;
             }
         }
+        public int Quantity { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }

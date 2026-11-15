@@ -25,7 +25,8 @@ namespace yakupov41
         public string Pickupcity { get; set; }
         public string Pickupstreet { get; set; }
         public string PickupHome { get; set; }
-    
+        public string FullAddress => $"{Pickupindex} г. {Pickupcity} ул. {Pickupstreet} {PickupHome}";
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
     }
